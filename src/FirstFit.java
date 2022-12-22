@@ -5,9 +5,9 @@ public class FirstFit {
     public ArrayList<Partition> FirstAllocate(ArrayList<Partition> parts , ArrayList<Process> procs){
         counter = parts.size();
         for (int i = 0; i < procs.size(); i++) {
-            for (int j =0; j<parts.size(); j++) {
-                if(procs.get(i).getSize()>=parts.get(j).getSize() && parts.get(j).Free){
-                    rem = parts.get(j).getSize() - procs.get(i).getSize();
+            for (int j =0; j<parts.size() ; j++) {
+                if(procs.get(i).getSize()<=parts.get(j).getSize() && parts.get(j).Free){
+                    rem = parts.get(j).getSize()-procs.get(i).getSize();
                     parts.get(j).setSize(procs.get(i).getSize());
                     parts.get(j).Free = false;
                     parts.get(j).setProcessName(procs.get(i).getName());
@@ -18,6 +18,7 @@ public class FirstFit {
                         counter++;
                         parts.add(p);
                     }
+
                     break;
                 }
             }
