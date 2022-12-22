@@ -1,10 +1,12 @@
 public class Partition {
     private String name;
     private int size;
+    boolean Free;
 
     public Partition(String name, int size) {
         this.name = name;
         this.size = size;
+        Free=true;
     }
 
     public String getName() {
