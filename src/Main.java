@@ -7,6 +7,8 @@ public class Main {
         ArrayList<Partition> Partitions = new ArrayList<Partition>();
         Scanner obj = new Scanner(System.in);
         WorstFit wrst = new WorstFit();
+        BestFit best = new BestFit();
+        Compaction com = new Compaction();
 
         //Pre-Defined
         Processes.add(new Process("Process 1",15));
@@ -49,11 +51,21 @@ public class Main {
         switch (choice){
             case 1:
             case 2:
-                wrst.WorstAllocate(Partitions,Processes);
+                Partitions = wrst.WorstAllocate(Partitions,Processes);
                 break;
             case 3:
+                Partitions = best.BestAllocate(Partitions,Processes);
+                break;
             default:
                 System.out.println("Invalid input!");
+        }
+        System.out.println("\nDo you want to compact?\n1.Yes\n2.No");
+        int opt = obj.nextInt();
+        switch (opt){
+            case 1:
+                com.compact(Partitions);
+            case 2:
+                break;
         }
 
     }

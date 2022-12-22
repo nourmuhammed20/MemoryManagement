@@ -15,6 +15,7 @@ public class Process {
     public Process(String name, int size) {
         this.size = size;
         this.name = name;
+        Allocated=false;
     }
 
     public void setSize(int size) {
