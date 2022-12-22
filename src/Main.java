@@ -52,6 +52,7 @@ public class Main {
         switch (choice){
             case 1:
                 Partitions = first.FirstAllocate(Partitions, Processes);
+                break;
             case 2:
                 Partitions = wrst.WorstAllocate(Partitions,Processes);
                 break;

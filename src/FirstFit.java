@@ -18,7 +18,6 @@ public class FirstFit {
                         counter++;
                         parts.add(p);
                     }
-
                     break;
                 }
             }
