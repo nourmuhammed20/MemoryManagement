@@ -3,6 +3,16 @@ public class Partition {
     private int size;
     boolean Free;
 
+    public Process getProcessName() {
+        return ProcessName;
+    }
+
+    public void setProcessName(Process processName) {
+        ProcessName = processName;
+    }
+
+    Process ProcessName;
+
     public Partition(String name, int size) {
         this.name = name;
         this.size = size;
