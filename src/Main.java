@@ -46,7 +46,7 @@ public class Main {
         System.out.println("Select the policy you want to apply :\n" +
                 "1. First fit\n" +
                 "2. Worst fit\n" +
-                "3. Best fit\n");
+                "3. Best fit");
         int choice = obj.nextInt();
         switch (choice){
             case 1:

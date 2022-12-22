@@ -4,11 +4,6 @@ public class Partition {
     boolean Free;
     String ProcessObj;
 
-
-    public String getProcessName() {
-        return ProcessObj;
-    }
-
     public void setProcessName(String processName) {
         ProcessObj=processName;
     }
@@ -24,10 +19,6 @@ public class Partition {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getSize() {
         return size;
     }
@@ -35,9 +26,5 @@ public class Partition {
     public void setSize(int size) {
         this.size = size;
     }
-
-
-
-
 
 }

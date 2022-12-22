@@ -24,7 +24,7 @@ public class Compaction {
 
         for (int i = 0; i < parts2.size(); i++){
             String name = ((parts2.get(i).ProcessObj == "null")? "External fragment":parts2.get(i).ProcessObj);
-            System.out.println(parts2.get(i).getName() + " ("+parts2.get(i).getSize() +") => "+ name);
+            System.out.println(parts2.get(i).getName() + " ("+parts2.get(i).getSize() +" KB) => "+ name);
         }
     }
 }

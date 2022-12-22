@@ -31,7 +31,7 @@ public class WorstFit {
 
         for (int i = 0; i < parts.size(); i++){
             String name = ((parts.get(i).ProcessObj == "null")? "External fragment":parts.get(i).ProcessObj);
-            System.out.println(parts.get(i).getName() + " ("+parts.get(i).getSize() +") => "+ name);
+            System.out.println(parts.get(i).getName() + " ("+parts.get(i).getSize() +" KB) => "+ name);
         }
         for (int i = 0; i <processes.size() ; i++) {
             if(!processes.get(i).isAllocated())

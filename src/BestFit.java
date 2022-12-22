@@ -5,11 +5,11 @@ public class BestFit {
     public ArrayList<Partition> BestAllocate(ArrayList<Partition> parts , ArrayList<Process> procs){
         counter = parts.size();
         parts.sort(new PartitionCompare());
-        for (int i = 0; i < procs.size(); i++) { //15
-            for (int j =0; j<parts.size() ; j++) { // 120
+        for (int i = 0; i < procs.size(); i++) {
+            for (int j =0; j<parts.size() ; j++) {
                 if(procs.get(i).getSize()<=parts.get(j).getSize() && parts.get(j).Free){
-                    rem = parts.get(j).getSize()-procs.get(i).getSize(); //105
-                    parts.get(j).setSize(procs.get(i).getSize());//15
+                    rem = parts.get(j).getSize()-procs.get(i).getSize();
+                    parts.get(j).setSize(procs.get(i).getSize());
                     parts.get(j).Free = false;
                     parts.get(j).setProcessName(procs.get(i).getName());
                     procs.get(i).setAllocated(true);
@@ -31,7 +31,7 @@ public class BestFit {
 
         for (int i = 0; i < parts.size(); i++){
             String name = ((parts.get(i).ProcessObj == "null")? "External fragment":parts.get(i).ProcessObj);
-            System.out.println(parts.get(i).getName() + " ("+parts.get(i).getSize() +") => "+ name);
+            System.out.println(parts.get(i).getName() + " ("+parts.get(i).getSize() +" KB) => "+ name);
         }
         for (int i = 0; i <processes.size() ; i++) {
             if(!processes.get(i).isAllocated())
