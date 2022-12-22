@@ -2,21 +2,22 @@ public class Partition {
     private String name;
     private int size;
     boolean Free;
+    String ProcessObj;
 
-    public Process getProcessName() {
-        return ProcessName;
+
+    public String getProcessName() {
+        return ProcessObj;
     }
 
-    public void setProcessName(Process processName) {
-        ProcessName = processName;
+    public void setProcessName(String processName) {
+        ProcessObj=processName;
     }
-
-    Process ProcessName;
 
     public Partition(String name, int size) {
         this.name = name;
         this.size = size;
         Free=true;
+        ProcessObj = "null";
     }
 
     public String getName() {
