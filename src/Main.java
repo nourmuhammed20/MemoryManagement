@@ -8,6 +8,7 @@ public class Main {
         Scanner obj = new Scanner(System.in);
         WorstFit wrst = new WorstFit();
         BestFit best = new BestFit();
+        FirstFit first = new FirstFit();
         Compaction com = new Compaction();
 
         //Pre-Defined
@@ -50,6 +51,7 @@ public class Main {
         int choice = obj.nextInt();
         switch (choice){
             case 1:
+                Partitions = first.FirstAllocate(Partitions, Processes);
             case 2:
                 Partitions = wrst.WorstAllocate(Partitions,Processes);
                 break;
