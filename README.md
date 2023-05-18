@@ -70,7 +70,6 @@ The input for the simulator should be provided in the following format:
 
 Sample input:
 
-mathematica
 
 ```mathematica
 Enter number of partitions:
